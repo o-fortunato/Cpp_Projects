@@ -70,7 +70,7 @@ bool playHiLo(int min, int max, int tries) {
 			std::cout << "Your guess is too low.\n";
 		}
 		if (i == tries) {
-			std::cout << "Sorry, you lose.The correct number was " << cpuChosenNumber << '.';
+			std::cout << "Sorry, you lose.The correct number was " << cpuChosenNumber << ".\n";
 			return false;
 		}
 	}
