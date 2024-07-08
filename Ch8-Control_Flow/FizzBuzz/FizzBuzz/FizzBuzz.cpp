@@ -25,22 +25,32 @@ fizz
 13
 14
 fizzbuzz
+
+Modify the FizzBuzz program you wrote in the previous quiz to add the rule that numbers divisible by seven should be replaced with “pop”.
+Run the program for 150 iterations.
+
+In this version, using an if/else chain to explicitly cover every possible combination of words will result in a function that is too long.
+Optimize your function so only 4 if-statements are used: one for each of the non-compound words (“fizz”, “buzz”, “pop”), and one for the case where a number is printed.
 */
 
 #include <iostream>
 
 void fizzBuzz(int maxNum) {
 	for (int i{ 1 }; i <= maxNum; i++) {
-		if (i % 3 == 0 && i % 5 == 0) {
-			std::cout << "fizzbuzz";
-		}
-		else if(i % 3 == 0) {
+		bool printed{ false };
+		if (i % 3 == 0) {
 			std::cout << "fizz";
+			printed = true;
 		}
-		else if (i % 5 == 0) {
+		if (i % 5 == 0) {
 			std::cout << "buzz";
+			printed = true;
 		}
-		else {
+		if (i % 7 == 0) {
+			std::cout << "pop";
+			printed = true;
+		}
+		if(!printed) {
 			std::cout << i;
 		}
 		std::cout << '\n';
@@ -48,7 +58,7 @@ void fizzBuzz(int maxNum) {
 }
 
 int main() {
-	fizzBuzz(15);
+	fizzBuzz(150);
 
 	return 0;
 }
