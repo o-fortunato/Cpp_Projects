@@ -80,6 +80,7 @@ bool playAgain()
 		char ch{};
 		std::cout << "Would you like to play again (y/n)? ";
 		std::cin >> ch;
+		ignoreLine();
 
 		switch (ch)
 		{
