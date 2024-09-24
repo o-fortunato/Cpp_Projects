@@ -1,3 +1,0 @@
-# AEROUBI_DescobreSeEsSocio
-
-
